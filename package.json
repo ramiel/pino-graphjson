@@ -1,6 +1,6 @@
 {
   "name": "pino-graphjson",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A graphjson transport for pino logger",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
@@ -22,5 +22,8 @@
     "@types/node": "^20.9.2",
     "tsup": "^8.0.0",
     "typescript": "^5.2.2"
-  }
+  },
+  "files": [
+    "dist/*"
+  ]
 }
