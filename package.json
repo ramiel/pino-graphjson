@@ -6,7 +6,7 @@
   "module": "dist/index.mjs",
   "scripts": {
     "build": "tsup",
-    "prepare": "npm build"
+    "prepare": "npm run build"
   },
   "keywords": [],
   "author": "Fabrizio Ruggeri",
