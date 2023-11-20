@@ -1,12 +1,14 @@
 import build from "pino-abstract-transport";
-import fetch from "node-fetch";
+import ky from "ky";
 
 export default function GraphjsonTransport({
   apiKey,
   collection,
+  graphjsonUrl = "https://api.graphjson.com/api/log",
 }: {
   apiKey: string;
   collection: string;
+  graphjsonUrl?: string;
 }) {
   console.log({ apiKey, collection });
   return build(
@@ -20,7 +22,7 @@ export default function GraphjsonTransport({
         };
 
         try {
-          await fetch("https://api.graphjson.com/api/log", {
+          await ky(graphjsonUrl, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(payload),
