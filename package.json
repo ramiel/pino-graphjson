@@ -5,12 +5,14 @@
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "scripts": {
-    "build": "tsup"
+    "build": "tsup",
+    "prepare": "npm build"
   },
   "keywords": [],
   "author": "Fabrizio Ruggeri",
   "license": "ISC",
   "dependencies": {
+    "node-fetch": "^3.3.2",
     "pino-abstract-transport": "^1.1.0"
   },
   "devDependencies": {
