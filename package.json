@@ -1,0 +1,21 @@
+{
+  "name": "pino-graphjson",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "scripts": {
+    "build": "tsup"
+  },
+  "keywords": [],
+  "author": "Fabrizio Ruggeri",
+  "license": "ISC",
+  "dependencies": {
+    "pino-abstract-transport": "^1.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.9.2",
+    "tsup": "^8.0.0",
+    "typescript": "^5.2.2"
+  }
+}
