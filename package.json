@@ -1,9 +1,10 @@
 {
   "name": "pino-graphjson",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A graphjson transport for pino logger",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
+  "type": "module",
   "scripts": {
     "build": "tsup",
     "prepare": "npm run build"
