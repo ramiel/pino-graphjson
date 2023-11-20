@@ -1,7 +1,7 @@
 import build from "pino-abstract-transport";
 import ky from "ky";
 
-export default function GraphjsonTransport({
+export default function ({
   apiKey,
   collection,
   graphjsonUrl = "https://api.graphjson.com/api/log",
@@ -10,9 +10,9 @@ export default function GraphjsonTransport({
   collection: string;
   graphjsonUrl?: string;
 }) {
-  console.log({ apiKey, collection });
   return build(
     async function (source) {
+      console.log({ apiKey, collection });
       for await (const obj of source) {
         const payload = {
           api_key: apiKey,

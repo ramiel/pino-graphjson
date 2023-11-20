@@ -1,12 +1,11 @@
 {
   "name": "pino-graphjson",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "A graphjson transport for pino logger",
-  "main": "dist/index.cjs",
-  "module": "dist/index.js",
-  "type": "module",
+  "main": "dist/index.mjs",
   "scripts": {
     "build": "tsup",
+    "dev": "tsup --watch",
     "prepare": "npm run build"
   },
   "keywords": [],
