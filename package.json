@@ -1,9 +1,9 @@
 {
   "name": "pino-graphjson",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A graphjson transport for pino logger",
-  "main": "dist/index.js",
-  "module": "dist/index.mjs",
+  "main": "dist/index.cjs",
+  "module": "dist/index.js",
   "type": "module",
   "scripts": {
     "build": "tsup",
