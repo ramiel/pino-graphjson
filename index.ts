@@ -5,19 +5,20 @@ export default function ({
   apiKey,
   collection,
   graphjsonUrl = "https://api.graphjson.com/api/log",
+  additionalLogKeys,
 }: {
   apiKey: string;
   collection: string;
   graphjsonUrl?: string;
+  additionalLogKeys?: Record<string, unknown>;
 }) {
   return build(
     async function (source) {
-      console.log({ apiKey, collection });
       for await (const obj of source) {
         const payload = {
           api_key: apiKey,
           collection,
-          json: JSON.stringify(obj),
+          json: JSON.stringify({ ...obj, additionalLogKeys }),
           timestamp: Math.floor(new Date().getTime() / 1000),
         };
 
