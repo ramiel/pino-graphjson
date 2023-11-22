@@ -18,7 +18,7 @@ export default function ({
         const payload = {
           api_key: apiKey,
           collection,
-          json: JSON.stringify({ ...obj, additionalLogKeys }),
+          json: JSON.stringify({ ...obj, ...additionalLogKeys }),
           timestamp: Math.floor(new Date().getTime() / 1000),
         };
 
